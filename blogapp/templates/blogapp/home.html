@@ -1,0 +1,12 @@
+{% extends 'blogapp/main.html' %}
+{% block main_section %}
+{% for post in news %}
+<h1>{{ post.title }}</h1>
+<p>{{ post.text }}</p>
+{% if post.author %}
+<p>Author: {{ post.author}} <br> date: {{ post.date }}</p>
+{% else %}
+<p>Author: Admin <br> date: {{post.date}}</p>
+{% endif %}
+{% endfor %}
+{% endblock main_section %}
