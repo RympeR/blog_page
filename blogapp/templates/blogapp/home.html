@@ -4,7 +4,7 @@
 <h1>{{ post.title }}</h1>
 <p>{{ post.text }}</p>
 {% if post.author %}
-<p>Author: {{ post.author}} <br> date: {{ post.date }}</p>
+<p>Author: {{ post.author}} <br> date: {{ post.date|date:"j F Y время: H:i:s" }}</p>
 {% else %}
 <p>Author: Admin <br> date: {{post.date}}</p>
 {% endif %}
